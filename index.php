@@ -11,6 +11,7 @@
 $path = dirname( __FILE__);
 $dirs = scandir($path);
 
+// ほげほげほげ
 foreach($dirs as $dir){
     switch($dir){
         case '.':
