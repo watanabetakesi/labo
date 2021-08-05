@@ -1,0 +1,7 @@
+Options +Indexes
+DirectoryIndex index.php
+#AuthType Basic
+#AuthName "Input your ID and Password."
+#AuthUserFile /var/www/src/testcodes/.htpasswd
+#require valid-user
+
