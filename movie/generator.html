@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<title>動画タグ生成</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="swfobject.js"></script>
+<style type="text/css" media="screen">
+body {
+	width:740px;
+}
+.col1, .col2, .col3, .col4 {
+	float:left;
+	display:inline;
+}
+.col1 {
+	width:220px;
+}
+.col2 {
+	width:380px;
+}
+.col3 {
+	width:100px;
+}
+.col4 {
+	width:120px;
+}
+.help, .clear {
+	clear:left;
+}
+div.clear {
+	height:1px;
+}
+#alternativeContent, #output {
+	width:580px;
+}
+#publishingMethodHelp, #alternativeContentHelp, #replaceIdHelp {
+	display:none;
+	width:700px;
+}
+#toggleReplaceId, #isIdReq, #toggleReplaceId {
+	display:none;
+}
+* {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	line-height:21px;
+}
+textarea {
+	font-family:Arial, Helvetica, sans-serif;
+	line-height:14px;
+}
+div {
+	vertical-align:text-bottom;
+}
+fieldset {
+	margin:6px 0;
+}
+input {
+	line-height:normal;
+}
+button {
+	line-height:normal;
+}
+h1 {
+	font-size:18px;
+}
+a {
+	color:blue;
+}
+.info {
+	border-bottom:1px dotted #666;
+	cursor:help;
+}
+.req {
+	color:red;
+	font-size: 9px;
+}
+.note {
+	font-size:10px;
+	color:#666;
+}
+.col11 {	float:left;
+	display:inline;
+}
+.col31 {	float:left;
+	display:inline;
+}
+.col41 {	float:left;
+	display:inline;
+}
+</style>
+<script type="text/javascript">
+		//<![CDATA[
+			function generateOutput() {
+				var swf = document.getElementById("swf").value;
+				var w = document.getElementById("width").value;
+				var h = document.getElementById("height").value;
+				var id = document.getElementById("attId").value;
+				var fms = document.getElementById("fms_app").value;
+				var fil = document.getElementById("video_file").value;
+				var ifs = document.getElementById("image_file").value;
+				var lin = document.getElementById("link_url").value;
+				var atp = document.getElementById("autoplay").value;
+				var mut = document.getElementById("mute").value;
+				var vol = document.getElementById("vol").value;
+				var ctb = document.getElementById("controllbar").value;
+				var bft = document.getElementById("buffertime").value;
+				var afs = document.getElementById("allowfullscreen").value;
+				var o;
+				var e = " />";
+
+					o = "<object classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0\" width=\"" + w + "\" height=\"" + h + "\"" + " id=\"" + id + "\"" + ">";
+					o += "\n\t<param name=\"flashvars\" value=\"fms_app=" + fms + "&video_file=" + fil + "&image_file=" + ifs + "&link_url=" + lin + "&autoplay=" + atp + "&mute=" + mut + "&vol=" + vol + "&controllbar=" + ctb + "&buffertime=" + bft + "\"" + e;
+					if (afs != "0") { o += "\n\t<param name=\"allowfullscreen\" value=\"" + afs + "\"" + e; }
+					o += "\n\t<param name=\"movie\" value=\"" + swf + "\"" + e;
+					o += "\n\t<embed src=\"" + swf + "\" width=\"" + w + "\" height=\"" + h + "\" name=\"" + id + "\" allowfullscreen=\"" + afs + "\" flashvars=\"fms_app=" + fms + "&video_file=" + fil + "&image_file=" + ifs + "&link_url=" + lin + "&autoplay=" + atp + "&mute=" + mut + "&vol=" + vol + "&controllbar=" + ctb + "&buffertime=" + bft + "\" type=\"application/x-shockwave-flash\" pluginspage=\"http://www.macromedia.com/go/getflashplayer\"" +e;
+					o += "\n</object>";
+
+				document.getElementById("output").value = o;
+			}
+			
+			function clearOutput() {
+				document.getElementById("output").value = "";
+			}
+
+//]]>
+</script>
+</head>
+<body>
+
+<form>
+	<fieldset>
+	<legend>動画設定</legend>
+	<div id="toggleable2">
+		<div class="col1">
+			<label for="swf">player.swfへのパス</label>
+			<span class="req">必須</span> </div>
+		<div class="col2">
+			<input type="text" id="swf" class="memorize" name="swf" size="50" />
+		</div>
+		<div class="clear">&nbsp;</div>
+		<div class="col1">
+			<label>貼り付けサイズ</label>
+			<span class="req">必須</span> </div>
+		<div class="col2">
+			横幅<input type="text" class="memorize" id="width" name="width" size="6" maxlength="6" />
+			x 縦幅
+			<input type="text" class="memorize" id="height" name="height" size="6" maxlength="6" />
+		</div>
+		<div class="clear">&nbsp;</div>
+		<div class="col1">
+			<label for="attId">貼り付け名</label>
+		</div>
+		<div class="col2">
+			<input type="text" id="attId" name="attId" size="15" class="memorize" />
+		</div>
+		<div class="clear">&nbsp;</div>
+				<div class="col1">
+			<label for="fms_app">FMSアプリケーションパス(※オプション)</label>
+		</div>
+		<div class="col2">
+			<input type="text" id="fms_app" name="fms_app" value="" size="50" class="memorize" />
+		</div>
+		<div class="clear">&nbsp;</div>
+		<div class="col1">
+			<label for="video_file">動画ファイルのパス（ストリーム名）</label><span class="req">必須</span> 
+		</div>
+		<div class="col2">
+			<input type="text" id="video_file" name="video_file" size="50" class="memorize" />
+		</div>
+		<div class="clear">&nbsp;</div>
+		<div class="col1">
+			<label for="image_file">サムネイル画像のパス</label>
+		</div>
+		<div class="col2">
+			<input type="text" id="image_file" name="image_file" size="50" class="memorize" />
+		</div>
+		<div class="clear">&nbsp;</div>
+		<div class="col1">
+			<label for="link_url">リンク先URL</label>
+		</div>
+		<div class="col2">
+			<input type="text" id="link_url" name="link_url" size="50" class="memorize" />
+		</div>
+		<div class="clear">&nbsp;</div>
+		<div class="col1">
+			<label for="autoplay">自動再生</label>
+		</div>
+		<div class="col2">
+			<select id="autoplay" name="autoplay">
+				<option value="true">する</option>
+				<option value="false" selected="selected">しない</option>
+			</select>
+		</div>
+		<div class="clear">&nbsp;</div>
+		<div class="col1">
+			<label for="mute">音声ミュート</label>
+		</div>
+		<div class="col2">
+			<select id="mute" name="mute">
+				<option value="true">する</option>
+				<option value="false" selected="selected">しない</option>
+			</select>
+		</div>
+		<div class="clear">&nbsp;</div>
+		<div class="col1">
+			<label for="vol">音量 [0.0～1.0]</label>
+		</div>
+		<div class="col2">
+			<input type="text" id="vol" name="vol" size="15" class="memorize" />
+		</div>
+		<div class="clear">&nbsp;</div>
+		<div class="col1">
+			<label for="controllbar">コントロールバー</label>
+		</div>
+		<div class="col2">
+			<select id="controllbar" name="controllbar" class="memorize">
+				<option value="true" selected="selected">表示する</option>
+				<option value="false">表示しない</option>
+			</select>
+		</div>
+		<div class="clear">&nbsp;</div>
+		<div class="col1">
+			<label for="buffertime">バッファする秒数</label>
+		</div>
+		<div class="col2">
+			<input type="text" id="buffertime" name="buffertime" size="15" class="memorize" />
+			秒
+		</div>
+		<div class="clear">&nbsp;</div>
+		<div class="col1">
+			<label for="allowfullscreen">フルスクリーン</label>
+		</div>
+		<div class="col2">
+			<select id="allowfullscreen" name="allowfullscreen" class="memorize">
+				<option value="true" selected="selected">許可する</option>
+				<option value="false">許可しない</option>
+			</select>
+		</div>
+		<div class="clear">&nbsp;</div>
+
+	</div>
+	</fieldset>
+	<div>
+		<input type="button" id="generate" name="generate" value="貼り付けコード生成" onclick="generateOutput()" />
+		<input type="button" id="clear" name="clear" value="貼り付けコードクリア" onclick="clearOutput()" />
+	</div>
+	<div class="clear">&nbsp;</div>
+	<fieldset>
+	<legend>html貼り付けコード</legend>
+	<div id="toggleable4">
+		<div class="col2">
+			<textarea id="output" name="output" rows="10" cols="3"></textarea>
+		</div>
+		<div class="clear">&nbsp;</div>
+	</div>
+	</fieldset>
+</form>
+<div class="clear">&nbsp;</div>
+<p><a href="player.swf">player.swfダウンロード</a>(※右クリックでファイル保存するんやで？)</p>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+@charset "shift_jis";
+
+.head-s { font-size: 95%; font-weight: bold; line-height: 120%; }
+.head-m { font-size: 100%; font-weight: bold; line-height: 140%; }
+.head-l { font-size: 120%; font-weight: bold; line-height: 140%; }
+.head-2l { font-size: 135%; font-weight: bold; line-height: 140%; }
+.head-3l { font-size: 150%; font-weight: bold; line-height: 140%; }
+
+.text-ss { font-size: 85%; font-weight: normal; line-height: 120%; }
+.text-s { font-size: 95%; font-weight: normal; line-height: 120%; }
+.text-m { font-size: 100%; font-weight: normal; line-height: 140%; }
+.text-l { font-size: 120%; font-weight: normal; line-height: 140%; }
+
+a:link { text-decoration: underline; }
+a:visited { text-decoration: underline; }
+a:hover { color: #ff0000; text-decoration: underline; }
+a:active { color: #ff6600; text-decoration: underline; }
+
+a.menu-on:link { color: #ffffff; text-decoration: none; }
+a.menu-on:visited { color: #ffffff; text-decoration: none; }
+a.menu-on:hover { color: #ffff00; text-decoration: underline; }
+a.menu-on:active { color: #ff6600; text-decoration: underline; }
+
+

@@ -1,0 +1,5 @@
+Satisfy any
+order allow,deny
+allow from all
+
+

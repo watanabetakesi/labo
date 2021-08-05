@@ -1,0 +1,57 @@
+<html>
+<body>
+
+
+<p>改行区切りでURLを入力してください</p>
+<textarea id="url_list" cols="100" rows="10">
+</textarea>
+<p>
+<button value="チェック" onclick="chekUrlList();">チェック</button>
+</p>
+
+
+<script type="text/javascript">
+function chekUrlList(){
+	var url_list = document.getElementById("url_list").value;
+	var ArrUrlList = url_list.split(/\r\n|\r|\n/);
+	ArrUrlList.forEach(function (value, index, array) {
+  		getUrlStatus(value);
+	});
+}
+
+
+function getUrlStatus(target_url){
+
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+            if( xhr.status === 200 || xhr.status === 304){
+                var ret = JSON.parse(xhr.responseText); // responseXML
+                response.success = true;
+                response.data = ret;
+                
+                if(typeof ret.meta !== 'undefined') settings.meta = ret.meta;
+                var post_data = ret.data;
+                    
+		if(ret.meta.code === 200){
+			console.log(target_url);
+                }else{
+                    return;
+                }
+            } else {
+                response.error_code = xhr.status;
+		response.error_message = xhr.statusText;
+		console.log(response);
+            }
+        }
+    };
+    xhr.onload = function() {
+        // TODO: hide a loader
+    };
+
+}
+
+</script>
+</body>
+</html>
+

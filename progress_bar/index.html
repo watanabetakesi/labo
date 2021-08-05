@@ -1,0 +1,86 @@
+<html>
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<style>
+#btn{
+    background:#999;
+    border:1px solid #666;
+    color:#fff;cursor:
+        pointer;display:
+        block;margin:0 0 10px;
+    outline:none;padding:5px;
+}
+progress, #download, #Update {float:left;}
+progress, #download {margin-right:10px;}
+#Update, #download {font:12px Arial, Verdana, sans-serif;color:#000;}
+</style>
+<script>
+//クリックイベント
+$(function() {
+
+
+bonus_score = new Array();
+
+bonus_score[0] = 50;
+bonus_score[1] = 60;
+bonus_score[2] = 80;
+bonus_score[3] = 100;
+user_score = bonus_score[Math.floor(Math.random()*bonus_score.length)];
+
+
+// スコア表示
+startAnimate(user_score);
+
+
+function startAnimate(score){
+    var bar = document.getElementById('Bar'),
+        fallback = document.getElementById('download'),
+        loaded = 0;
+
+    var load = function() {
+        loaded += 1;
+        bar.value = loaded;
+        //未サポートブラウザ時の処理
+        $(fallback).empty().append("HTML5非対応だし・・・ ");
+        //ロード中の処理
+        $('#Update').empty().append(loaded + "点 ボーナススコア");
+
+
+	if (loaded == score ) {
+		clearInterval(beginLoad);
+		$('#Update').empty().append("<span class=\"score\">" + loaded + "</span>点ゲット！");
+	}
+
+        //100%に達した際のメッセージ表示
+        if (loaded == 100) {
+            clearInterval(beginLoad);
+            $('#Update').empty().append("<span class=\"onemore\">ワンモアチャンス！</span>");
+        }
+	
+    };
+    var beginLoad = setInterval(function() {
+        load();
+    }, 50);
+}
+
+});
+
+
+</script>
+</head>
+<body>
+
+<div class="clear"></div>
+<progress value="0" max="100" id="Bar">
+    <span id="download">
+
+    </span>
+</progress>
+<div id="Update">
+
+</div>
+
+
+</body>
+</html>
+

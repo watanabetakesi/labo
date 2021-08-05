@@ -1,0 +1,122 @@
+[
+    {
+        "host": "140.227.69.49",
+        "port": "8080",
+        "protocol": "HTTPS",
+        "result": "OK"
+    },
+    {
+        "host": "59.29.245.151",
+        "port": "3128",
+        "protocol": "HTTPS",
+        "result": "OK"
+    },
+    {
+        "host": "140.227.237.154",
+        "port": "1000",
+        "protocol": "HTTPS",
+        "result": "OK"
+    },
+    {
+        "host": "140.227.238.18",
+        "port": "1000",
+        "protocol": "HTTPS",
+        "result": "OK"
+    },
+    {
+        "host": "140.227.174.216",
+        "port": "1000",
+        "protocol": "HTTPS",
+        "result": "OK"
+    },
+    {
+        "host": "140.227.229.208",
+        "port": "3128",
+        "protocol": "HTTPS",
+        "result": "OK"
+    },
+    {
+        "host": "140.227.175.225",
+        "port": "1000",
+        "protocol": "HTTPS",
+        "result": "OK"
+    },
+    {
+        "host": "169.51.80.228",
+        "port": "3128",
+        "protocol": "HTTPS",
+        "result": "OK"
+    },
+    {
+        "host": "84.38.185.230",
+        "port": "3128",
+        "protocol": "HTTPS",
+        "result": "OK"
+    },
+    {
+        "host": "140.227.173.230",
+        "port": "1000",
+        "protocol": "HTTPS",
+        "result": "OK"
+    },
+    {
+        "host": "163.172.189.32",
+        "port": "8811",
+        "protocol": "HTTPS",
+        "result": "OK"
+    },
+    {
+        "host": "64.188.3.162",
+        "port": "3128",
+        "protocol": "HTTPS",
+        "result": "OK"
+    },
+    {
+        "host": "51.158.111.242",
+        "port": "8811",
+        "protocol": "HTTPS",
+        "result": "OK"
+    },
+    {
+        "host": "52.179.18.244",
+        "port": "8080",
+        "protocol": "HTTPS",
+        "result": "OK"
+    },
+    {
+        "host": "51.158.123.35",
+        "port": "8811",
+        "protocol": "HTTP",
+        "result": "OK"
+    },
+    {
+        "host": "178.63.41.235",
+        "port": "9999",
+        "protocol": "HTTPS",
+        "result": "OK"
+    },
+    {
+        "host": "178.128.82.208",
+        "port": "8080",
+        "protocol": "HTTPS",
+        "result": "OK"
+    },
+    {
+        "host": "157.230.33.138",
+        "port": "8080",
+        "protocol": "HTTPS",
+        "result": "OK"
+    },
+    {
+        "host": "116.203.254.70",
+        "port": "3129",
+        "protocol": "HTTPS",
+        "result": "OK"
+    },
+    {
+        "host": "140.227.237.154",
+        "port": "1000",
+        "protocol": "HTTP",
+        "result": "OK"
+    }
+]

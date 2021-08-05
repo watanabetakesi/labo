@@ -1,0 +1,14 @@
+@charset "shift_jis";
+
+.head-s { font-size: 75%; }
+.head-m { font-size: 80%; }
+.head-l { font-size: 90%; }
+.head-2l { font-size: 100%; }
+.head-3l { font-size: 120%; }
+
+.text-ss { font-size: 65%; }
+.text-s { font-size: 75%; }
+.text-m { font-size: 80%; }
+.text-l { font-size: 90%; }
+
+

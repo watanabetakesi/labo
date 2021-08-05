@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+/* reset element
+----------------------------------------------------*/
+
+body {
+	padding: 0;
+	margin: 0;
+	color: #666;
+	text-align: center;
+	background: #FFF;
+	font-family: "ＭＳ Ｐゴシック", "ヒラギノ角ゴ Pro W3", Osaka, Verdana, Arial, Helvetica, sans-serif;
+	font-size:100%;
+}
+
+
+
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,
+pre,form,fieldset,p,blockquote,th,td {
+	padding: 0;
+	margin: 0;
+}
+
+ul,ol,dl{
+	list-style:none;
+}
+
+caption,th {
+	text-align: left;
+}
+
+th{
+	font-weight:normal;
+}
+
+img,a img{
+	vertical-align:top;
+	border:none;
+	background:transparent;
+}
+
+object,embed{
+	vertical-align:top;
+}
+ 
+br{
+	letter-spacing: normal;
+}
+
+caption{
+	font-style: normal;
+	font-weight: normal;
+}
+dfn,cite{
+	font-style:normal;
+}
+
+table {
+	font-size: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	empty-cells: show;
+}
+
+th,td{
+	vertical-align: top;
+}
+
+fieldset,img {
+	border: none;
+}
+
+input,textarea{
+  font-size:1em;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-size: 100%;
+	line-height: 1.0;
+}
+
+em,address,dfn{
+  font-style:normal;
+}
+
+sup {
+	vertical-align:text-top;
+}
+
+sub {
+	vertical-align:text-bottom;
+}
+
+hr {
+	display: none;
+}
+
+div#header {
+        min-width:810px;
+        background: none repeat scroll 0 0 #FFFFFF;
+        border-bottom: 2px solid #000000;
+        height: 80px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index:9999;
+        position: fixed;
+        border-bottom: 2px solid #000000;
+	text-align:left;
+}
+
