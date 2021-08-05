@@ -11,6 +11,7 @@
 $path = dirname( __FILE__);
 $dirs = scandir($path);
 
+// これはfixes_00001 の作業内容です。
 foreach($dirs as $dir){
     switch($dir){
         case '.':
