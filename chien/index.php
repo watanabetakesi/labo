@@ -9,12 +9,20 @@ if(isset($_GET['date']) && strtotime($_GET['date'])){
     $week = $arr_week[date('w')];
 }
 
+$start = '7';
+if(isset($_GET['start'])&&$_GET['start']){
+    $start = $_GET['start'];
+}
+$end = '10';
+if(isset($_GET['end'])&&$_GET['end']){
+    $end = $_GET['end'];
+}
 $rosen = '京浜東北線・根岸線';
-if(isset($_GET['rosen'])){
+if(isset($_GET['rosen']) && $_GET['rosen']){
     $rosen = $_GET['rosen'];
 }
 $min = '10';
-if(isset($_GET['min'])){
+if(isset($_GET['min'])&&$_GET['min']){
     $min = $_GET['min'];
 }
 ?>
@@ -29,7 +37,15 @@ if(isset($_GET['min'])){
         <meta content="NOINDEX,NOFOLLOW" name="ROBOTS">
         <meta name="keywords" content="遅延証明書,JR東日本,ジェイアール">
         <meta name="description" content="JR東日本の遅延証明書の印刷用ページです。">
-        <title>JR東日本：遅延証明書</title>
+        <!--
+使い方
+rosen:  路線名を指定。無指定の場合は「京浜東北線・根岸線」
+date:   日付をyyyymmddで指定。無指定の場合は、本日の日付。
+start:  遅延開始時刻を数字で指定。無指定の場合は7時。
+end:    遅延終了時刻を数字で指定。無指定の場合は10時。
+min:    遅延長を指定。無指定の場合は、10分。10, 20, 30, 40, 50, 60, 60以上の数字は全て61分以上になる。無指定の場合10分。
+        -->
+	<title>JR東日本：遅延証明書</title>
         <!-- スタイルシート設定 -->
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/default.css">
@@ -58,7 +74,7 @@ if(isset($_GET['min'])){
     </head>
     <body text="#333333" bgcolor="#ffffff" topmargin="0" marginheight="0" leftmargin="0" marginwidth="0">
         <!-- JR東日本共通ヘッダー -->
-        <table border="0" cellpadding="0" cellspacing="0" width="600"><tbody><tr><td><a href="http://www.jreast.co.jp/"><img src="https://traininfo.jreast.co.jp/delay_certificate/img/jr_logo.jpg" width="263" height="48" border="0" alt="JR東日本"></a></td><td align="right"><a href="javascript:window.close();" onmouseover="imageOn('b_close');" onmouseout="imageOff('b_close');"><img src="https://traininfo.jreast.co.jp/delay_certificate/img/b_close_01.gif" width="55" height="17" border="0" alt="閉じる" name="b_close"></a><img src="https://traininfo.jreast.co.jp/delay_certificate/img/_.gif" width="10" height="1" border="0" alt=""></td></tr><tr><td colspan="2" background="https://traininfo.jreast.co.jp/delay_certificate/img/line_header_ber.gif" align="right"><img src="https://traininfo.jreast.co.jp/delay_certificate/img/line_header_ber_c.gif" width="8" height="6" border="0" alt=""></td></tr></tbody></table>
+        <table border="0" cellpadding="0" cellspacing="0" width="600"><tbody><tr><td><a href="http://www.jreast.co.jp/"><img src="https://traininfo.jreast.co.jp/delay_certificate/img/jr_logo.jpg" width="263" height="48" border="0" alt="JR東日本"></a></td><td align="right"><a href="javascript:console.log('このボタンは再現しておいてるだけなので自分で閉じてね。')"><img src="https://traininfo.jreast.co.jp/delay_certificate/img/b_close_01.gif" width="55" height="17" border="0" alt="閉じる" name="b_close"></a><img src="https://traininfo.jreast.co.jp/delay_certificate/img/_.gif" width="10" height="1" border="0" alt=""></td></tr><tr><td colspan="2" background="https://traininfo.jreast.co.jp/delay_certificate/img/line_header_ber.gif" align="right"><img src="https://traininfo.jreast.co.jp/delay_certificate/img/line_header_ber_c.gif" width="8" height="6" border="0" alt=""></td></tr></tbody></table>
         <!-- /JR東日本共通ヘッダー -->
         <!-- メインコンテンツ -->
         <table border="0" cellpadding="0" cellspacing="0" width="600">
@@ -87,7 +103,7 @@ if(isset($_GET['min'])){
                                                 <tr>
                                                     <td><img src="img/_.gif" width="1" height="10" border="0" alt=""></td>
                                                 </tr>
-                                                <tr><td class="text-m"><span id="lblInformation0"></span><span id="lblInformation1"><?=$rosen?>の列車が7時から10時の間、最大で以下のとおり遅れたことを証明します。</span></td></tr>
+						<tr><td class="text-m"><span id="lblInformation0"></span><span id="lblInformation1"><?=$rosen?>の列車が<?=$start?>時から<?=$end?>時の間、最大で以下のとおり遅れたことを証明します。</span></td></tr>
                                                 <tr>
                                                     <td><img src="img/_.gif" width="1" height="10" border="0" alt=""></td>
                                                 </tr>
@@ -122,7 +138,7 @@ if(isset($_GET['min'])){
                                                                                         <td><img src="img/_.gif" width="3" height="1" border="0" alt=""></td>
                                                                                         <td><img src="img/p_60min<?=($min == '60') ? '_stay' : ''?>.gif" width="52" height="33" border="0" alt="60分"></td>
                                                                                         <td><img src="img/_.gif" width="3" height="1" border="0" alt=""></td>
-                                                                                        <td><img src="img/p_60over<?=($min == '70') ? '_stay' : ''?>.gif" width="78" height="33" border="0" alt="61分以上"></td>
+                                                                                        <td><img src="img/p_60over<?=($min > '60') ? '_stay' : ''?>.gif" width="78" height="33" border="0" alt="61分以上"></td>
                                                                                     </tr>
                                                                                 </table>
                                                                             </td>
