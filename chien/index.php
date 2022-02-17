@@ -1,6 +1,7 @@
 <?php
 $arr_week = array('日', '月', '火', '水', '木', '金', '土');
 
+//遅延発生日付
 if(isset($_GET['date']) && strtotime($_GET['date'])){
     $date = date('Y年n月d日', strtotime($_GET['date']));
     $week = $arr_week[date('w', $_GET['date'])];
@@ -8,19 +9,22 @@ if(isset($_GET['date']) && strtotime($_GET['date'])){
     $date = date('Y年n月d日');
     $week = $arr_week[date('w')];
 }
-
+//遅延開始時刻
 $start = '7';
 if(isset($_GET['start'])&&$_GET['start']){
     $start = $_GET['start'];
 }
+//遅延終了時刻
 $end = '10';
 if(isset($_GET['end'])&&$_GET['end']){
     $end = $_GET['end'];
 }
+//路線名
 $rosen = '京浜東北線・根岸線';
 if(isset($_GET['rosen']) && $_GET['rosen']){
     $rosen = $_GET['rosen'];
 }
+//遅延長
 $min = '10';
 if(isset($_GET['min'])&&$_GET['min']){
     $min = $_GET['min'];
@@ -44,7 +48,7 @@ date:   日付をyyyymmddで指定。無指定の場合は、本日の日付。
 start:  遅延開始時刻を数字で指定。無指定の場合は7時。
 end:    遅延終了時刻を数字で指定。無指定の場合は10時。
 min:    遅延長を指定。無指定の場合は、10分。10, 20, 30, 40, 50, 60, 60以上の数字は全て61分以上になる。無指定の場合10分。
-        -->
+	-->
 	<title>JR東日本：遅延証明書</title>
         <!-- スタイルシート設定 -->
         <link rel="stylesheet" type="text/css" href="css/style.css">
