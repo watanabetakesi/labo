@@ -1,6 +1,0 @@
-RewriteEngine on
-RewriteBase /test/design/seesawstudio/
-RewriteCond $1 !^(index\.php|css|custom|files|img|js|theme|*\.jpg|robots\.txt)
-RewriteRule ^(.*)$ index.html/$1 [L]
-
-

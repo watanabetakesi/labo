@@ -12,7 +12,12 @@ $path = dirname( __FILE__);
 $dirs = scandir($path);
 
 foreach($dirs as $dir){
-	if(is_dir($dir) && ($dir !== '.') && ($dir !== '..' && ($dir !== '.svn'))) echo "<li><a href='./$dir'>$dir</a></li>";
+	if(
+	  is_dir($dir) &&
+	 ($dir !== 'helpers') &&
+	 ($dir !== '.') && 
+	 ($dir !== '..' && 
+	 ($dir !== '.git'))) echo "<li><a href='./$dir'>$dir</a></li>";
 }
 
 ?>
