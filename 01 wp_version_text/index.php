@@ -2,6 +2,7 @@
 
 <html>
     <body>
+    <h3>WordPressプラグインバージョンアップ情報よりぬきくん</h3>
     <form action="./" method="post">
         <div style="display:block;width:500px;">
             <div>
@@ -10,7 +11,7 @@
             </textarea>
             </div>
             <div width="100%" style="text-align:center;margin:10px;">
-                <input type="submit" value="バージョンアップ情報生成" style="width:auto;height:30px;">
+                <input type="submit" value="バージョンアップ報告文書作成" style="width:auto;height:30px;">
             </div>
         </div>
         
