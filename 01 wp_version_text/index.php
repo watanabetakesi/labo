@@ -6,9 +6,7 @@
     <form action="./" method="post">
         <div style="display:block;width:500px;">
             <div>
-            <textarea name="text" rows="20" cols="100">
-                <?= isset($_POST["text"]) ? $_POST["text"] : "" ?>
-            </textarea>
+            <textarea name="text" rows="20" cols="100"><?= isset($_POST["text"]) ? $_POST["text"] : "" ?></textarea>
             </div>
             <div width="100%" style="text-align:center;margin:10px;">
                 <input type="submit" value="バージョンアップ報告文書作成" style="width:auto;height:30px;">
