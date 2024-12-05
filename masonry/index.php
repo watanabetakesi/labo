@@ -1,5 +1,5 @@
-<html>	
-<head>
+<?php include_once(dirname(dirname(__FILE__)) . '/parts/header.php'); ?>
+<?php include_once(dirname(dirname(__FILE__)) . '/parts/sidebar.php'); ?>
 <style>
 #grid {
   display: grid;
@@ -18,9 +18,7 @@
   align-items: center;
   justify-content: center;
 }
-
 </style>
-
 <script>
 let index = 1;
 const addItem = () => {
@@ -49,17 +47,13 @@ window.addEventListener('load', () => {
   })
 })
 </script>
-
-
-
-</head>
-<body>
-
-<button id="addItemButton">
-  addItem
-</button>
-<div id="grid">
+<div class="wrapper">
+    <button id="addItemButton">
+    addItem
+    </button>
+    <div id="grid">
+    </div>
 </div>
+<?php include_once(dirname(dirname(__FILE__)) . '/parts/footer.php'); ?>
 
-</body>
-</html>
+

@@ -3,11 +3,11 @@
 
 <div class="wrapper">
 
-       <form>
+
+       <legend class="uk-legend">Uikit Form Sample</legend>
+
+       <form class="uk-form">
               <fieldset class="uk-fieldset">
-
-              <legend class="uk-legend">Uikit Form Sample</legend>
-
               <div class="uk-margin">
                      <input class="uk-input" type="text" placeholder="Input" aria-label="Input">
               </div>
@@ -45,24 +45,11 @@
               </fieldset>
        </form>
 
-       <p class='uk-text-lead'>lead-TEST</p>
-       <p class='uk-text-meta'>meta-TEST</p>
-       <p class='uk-text-small'>small-TEST</p>
-       <p class='uk-text-large'>large-TEST</p>
-       <p class='uk-text-bold'>bold-TEST</p>
-       <p class='uk-text-mute'>mute-TEST</p>
-       <p class='uk-text-emphasis'>emphasis-TEST</p>
-       <p class='uk-text-primary'>primary-TEST</p>
-       <p class='uk-text-success'>success-TEST</p>
-       <p class='uk-text-warning'>warning-TEST</p>
-       <p class='uk-text-danger'>danger-TEST</p>
-       <p class='uk-text-left'>left-TEST</p>
-       <p class='uk-text-right'>right-TEST</p>
-       <p class='uk-text-center'>center-TEST</p>
-       <p class='uk-text-top'>top-TEST</p>
-       <p class='uk-text-middle'>muddle-TEST</p>
-       <p class='uk-text-bottom'>bottom-TEST</p>
-       <p class='uk-text-baseline'>baseline-TEST</p>
+       <div class="uk-grid">
+              <div class="uk-width-2-3">グリッド1：これはグリッドで指定した左側３分の２の幅のグリッドボックスです。グリッド1これはグリッドで指定した左側３分の２の幅のグリッドボックスです。グリッド1これはグリッドで指定した左側３分の２の幅のグリッドボックスです。グリッド1これはグリッドで指定した左側３分の２の幅のグリッドボックスです。グリッド1これはグリッドで指定した左側３分の２の幅のグリッドボックスです。グリッド1これはグリッドで指定した左側３分の２の幅のグリッドボックスです。グリッド1これはグリッドで指定した左側３分の２の幅のグリッドボックスです。</div>
+              <div class="uk-width-1-3">グリッド2：これはグリッドで指定した左側３分の１の幅のグリッドボックスです。これはグリッドで指定した左側３分の１の幅のグリッドボックスです。これはグリッドで指定した左側３分の１の幅のグリッドボックスです。これはグリッドで指定した左側３分の１の幅のグリッドボックスです。これはグリッドで指定した左側３分の１の幅のグリッドボックスです。これはグリッドで指定した左側３分の１の幅のグリッドボックスです。これはグリッドで指定した左側３分の１の幅のグリッドボックスです。これはグリッドで指定した左側３分の１の幅のグリッドボックスです。これはグリッドで指定した左側３分の１の幅のグリッドボックスです。これはグリッドで指定した左側３分の１の幅のグリッドボックスです。これはグリッドで指定した左側３分の１の幅のグリッドボックスです。</div>
+       </div>
+
 </div>
 
 

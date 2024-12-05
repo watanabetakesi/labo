@@ -25,7 +25,8 @@
                             $class = (preg_match(pattern: "/{$dir}/", subject: $_SERVER["DOCUMENT_URI"])) ? ' class="uk-active"': "";
 
                             if(is_dir($path . "/" . $dir) &&
-                            ($dir !== 'lib') &&	 
+                            ($dir !== 'parts') &&
+                            ($dir !== 'lib') &&
                             ($dir !== 'helpers') &&
                             ($dir !== '.') && 
                             ($dir !== '..' && 
