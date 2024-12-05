@@ -15,16 +15,21 @@
                 <a class="uk-navbar-toggle uk-navbar-toggle-animate" uk-navbar-toggle-icon href="#"></a>
                 <div class="uk-navbar-dropdown">
                     <ul class="uk-nav uk-navbar-dropdown-nav">
+                        <li><a href="<?= BASE_URL ?>">TOP</a></li>
                         <?php 
                         $path = dirname(dirname( __FILE__));
                         $dirs = scandir($path);
+                        
                         foreach($dirs as $dir){
+                            
+                            $class = (preg_match(pattern: "/{$dir}/", subject: $_SERVER["DOCUMENT_URI"])) ? ' class="uk-active"': "";
+
                             if(is_dir($path . "/" . $dir) &&
                             ($dir !== 'lib') &&	 
                             ($dir !== 'helpers') &&
                             ($dir !== '.') && 
                             ($dir !== '..' && 
-                            ($dir !== '.git'))) echo '<li><a href="' . BASE_URL . "/{$dir}" .'">' . $dir . '</a></li>';
+                            ($dir !== '.git'))) echo '<li' . $class . '><a href="' . BASE_URL . "/{$dir}" .'">' . $dir . '</a></li>';
                         }
                         ?>                        
                     </ul>
