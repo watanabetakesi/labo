@@ -34,10 +34,16 @@ if(isset($_GET['url'])){
             <input type="submit" />
         </form>
         
-        <p>最終到達URL</p>
-        <?php if($return = get_destination_url($url)): ?>
-        <p><?= $return ?></p>
-        <?php endif; ?>
+        <p>画像リスト</p>
+        <img src="
+        <?php 
+            if($_GET['url']){
+                $media_url = $url . "media/?size=l";
+                get_file_with_referer($media_url, $url);
+            }
+            
+        ?>
+        ">
     </body>
 </html>
 <?php

@@ -1,5 +1,7 @@
 <?php
 
+define("BASE_URL", "{$_SERVER['REQUEST_SCHEME']}://{$_SERVER['HTTP_HOST']}");
+
 function get_proxy(){
 
     $arr_proxy = '[
@@ -336,4 +338,28 @@ function get_destination_url($url){
     curl_close($ch);
 
     return $destination_url;
+}
+
+function get_file_with_referer($url, $referer){
+
+    $opts = [
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_SSL_VERIFYPEER => false,
+    CURLOPT_URL => $url,
+    CURLOPT_HEADER => true,
+    CURLOPT_NOBODY => true,
+    CURLOPT_FOLLOWLOCATION => true, // リダイレクト検証
+    CURLOPT_MAXREDIRS => 5, // リダイレクト回数
+    CURLOPT_USERAGENT => 'User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:38.0) Gecko/20100101 Firefox/38.1.0 Waterfox/38.1.0',
+    CURLOPT_HTTPHEADER => ['Accept-language: ja']
+    ];
+    $ch = curl_init();
+    curl_setopt_array($ch, $opts);
+    $ret = curl_exec($ch);
+    curl_close($ch);
+
+    header('Content-Type: image/png');  // ヘッダを指定する
+    print $ret;
+
+
 }

@@ -1,11 +1,11 @@
-<?php include_once(dirname(__FILE__) . '/parts/header.php'); ?>
-<?php include_once(dirname(__FILE__) . '/parts/sidebar.php'); ?>
+<?php include_once(dirname(dirname(__FILE__)) . '/parts/header.php'); ?>
+<?php include_once(dirname(dirname(__FILE__)) . '/parts/sidebar.php'); ?>
 
 <div class="wrapper">
     <form>
         <fieldset class="uk-fieldset">
 
-            <legend class="uk-legend">Uikit Form Sample</legend>
+            <legend class="uk-legend">テキストフォーマッター</legend>
 
             <div class="uk-margin">
                 <input class="uk-input" type="text" placeholder="Input" aria-label="Input">
@@ -44,4 +44,4 @@
         </fieldset>
     </form>
 </div>
-<?php include_once(dirname(__FILE__) . '/parts/footer.php'); ?>
+<?php include_once(dirname(dirname(__FILE__)) . '/parts/footer.php'); ?>

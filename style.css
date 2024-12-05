@@ -24,6 +24,17 @@ font-size: 14px;
 border-left: 8px solid #990033;
 background-color: #474655;
 }
+
 body {
-background-color:#C0C0C0;
+    background-color:#ffffff;
+}
+.wrapper {
+    padding: 10px;
+    margin: 10px;
+}
+
+
+/* over rider uikit css */
+.uk-container {
+    max-width : 100vw !important;
 }
