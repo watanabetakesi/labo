@@ -187,7 +187,6 @@
 <div class="item_title">夏樹 みくる</div>
 <div class="item_cv">cv (洲 崎綾)</div>
 </div>
-
 <div class="items">
 <div class="item_image">
 <img src="" data-src="https://cdn.img-conv.gamerch.com/img.gamerch.com/aikatsu-photo/wikidb_img/1492667475001.jpg">
@@ -216,13 +215,29 @@
 <div class="item_title">姫里 マリア</div>
 <div class="item_cv">cv (冨岡 美沙子)</div>
 </div>
+</div>
+</div>
+<div class="owl-nav">
+<div class="owl-prev" onclick="slider('aikatsu', 'prev');return;"></div>
+<div class="owl-next" onclick="slider('aikatsu', 'next');return;"></div>
+</div>
+<div class="clearfix"></div>
+</div>
+</section>
+
+
+
+<section class="section_content row">
+<div class="item_carousel" id="aikatsu2">
+<div class="slider_wrapper">
+<div class="slider">
 <div class="items">
 <div class="item_image">
 <img src="" data-src="https://cdn.img-conv.gamerch.com/img.gamerch.com/aikatsu-photo/wikidb_img/1491013010.jpg">
 </div>
 <div class="item_title">大空 あかり</div>
 <div class="item_cv">cv (下地 紫野)</div>
-</div>                
+</div>
 <div class="items">
 <div class="item_image">
 <img src="" data-src="https://i.pinimg.com/originals/57/9e/68/579e68f4cfc0a1196123c5688e4acf10.jpg">
@@ -289,8 +304,8 @@
 </div>
 </div>
 <div class="owl-nav">
-<div class="owl-prev" onclick="slider('aikatsu', 'prev');return;"></div>
-<div class="owl-next" onclick="slider('aikatsu', 'next');return;"></div>
+<div class="owl-prev" onclick="slider('aikatsu2', 'prev');return;"></div>
+<div class="owl-next" onclick="slider('aikatsu2', 'next');return;"></div>
 </div>
 <div class="clearfix"></div>
 </div>
@@ -408,10 +423,6 @@
 </div>
 </section>
 
-<div class="owl-nav">
-<div class="owl-prev" onclick="slider('aikatsufriends', 'prev');return;"></div>
-<div class="owl-next" onclick="slider('aikatsufriends', 'next');return;"></div>
-</div>
 <div class="clearfix"></div>
 </div>
 </section>
@@ -423,6 +434,8 @@
     window.onload = function () {
         getScaleInfo('aikatsu');
         lazyLoad('aikatsu');
+        getScaleInfo('aikatsu2');
+        lazyLoad('aikatsu2');
         getScaleInfo('aikatsustars');
         lazyLoad('aikatsustars');
         //getScaleInfo('aikatsufriends');
