@@ -1,3 +1,5 @@
+<? $page_title = "QRコード生成" ?>
+
 <?php include_once(dirname(dirname(__FILE__)) . '/parts/header.php'); ?>
 <?php include_once(dirname(dirname(__FILE__)) . '/parts/sidebar.php'); ?>
 

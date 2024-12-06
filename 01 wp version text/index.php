@@ -1,3 +1,4 @@
+<? $page_title = "WordPress運用ツール" ?>
 <?php include_once(dirname(dirname(__FILE__)) . '/parts/header.php'); ?>
 <?php include_once(dirname(dirname(__FILE__)) . '/parts/sidebar.php'); ?>
 
@@ -5,7 +6,7 @@
     <form action="./" method="post">
         <fieldset class="uk-fieldset">
 
-            <legend class="uk-legend">プラグイン更新情報</legend>
+            <legend class="uk-legend">プラグイン更新情報えりぬきくん</legend>
 
             <div class="uk-margin"><textarea name="text" rows="20" cols="100"><?= isset($_POST["text"]) ? $_POST["text"] : "" ?></textarea></div>
 

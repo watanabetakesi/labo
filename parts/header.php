@@ -36,6 +36,9 @@
                     </ul>
                 </div>
             </div>
+            <div class="uk-navbar-center">
+                <?= isset($page_title) ? $page_title : TITLE ; ?>
+            </div>
 
         </div>
     </div>
