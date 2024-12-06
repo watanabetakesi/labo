@@ -5,10 +5,12 @@
 <script type="text/javascript" src="wScratchPad.js"></script>
 
 <div class="wrapper">
-	<img id="finish" width="150" style="display:none;" src="images/finish.jpg"/><br/>
-	<div id="wScratchPad" style="cursor:pointer; display:inline-block; position:relative;border:none;"></div>
+	<div class="uk-grid">
+		<div class="uk-width-1-3"><img id="finish" width="150" style="float:right;display:none;" src="images/finish.jpg"/></div>
+		<div class="uk-width-1-3" id="wScratchPad" style="cursor:pointer; display:inline-block; position:relative;border:none;"></div>
+		<div class="uk-width-1-3"></div>
+	</div>
 </div>
-
 
 <?php include_once(dirname(dirname(__FILE__)) . '/parts/footer.php'); ?>
 
