@@ -54,25 +54,27 @@ if (isset($_REQUEST['data'])) {
 <form action="index.php" method="post" class="uk-form">
         <fieldset class="uk-fieldset">
         <div class="uk-margin">
+            <label class="uk-form-label" for="data">テキストデータ</label>
             <input name="data" value="<?= isset($_REQUEST['data']) ? htmlspecialchars($_REQUEST['data']) : 'input text data'; ?>" class="uk-input" type="text" placeholder="Input" aria-label="Input">
         </div>
 
         <div class="uk-margin">
-                <label class="uk-form-label" for="level">品質</label>
-                <select name="level" class="uk-select" aria-label="Select">
+            <label class="uk-form-label" for="level">レベル</label>
+            <select name="level" class="uk-select" aria-label="Select">
                 <option value="L" <?=($errorCorrectionLevel == 'L') ? ' selected' : '' ?>>L(smallest)</option>
                 <option value="M" <?=($errorCorrectionLevel == 'M') ? ' selected' : '' ?>>M</option>
                 <option value="Q" <?=($errorCorrectionLevel == 'Q') ? ' selected' : '' ?>>Q</option>
                 <option value="H" <?=($errorCorrectionLevel == 'H') ? ' selected' : '' ?>>H(best)</option>
-                </select>
+            </select>
         </div>
 
         <div class="uk-margin">
-                <select name="size" class="uk-select" aria-label="Select">
+            <label class="uk-form-label" for="size">サイズ</label>
+            <select name="size" class="uk-select" aria-label="Select">
                 <?php for($i = 1;$i <= 10;$i++): ?>
-                    <option value="<?= $i ?>" <?php if($matrixPointSize == $i): ?>selected<?php endif; ?>><?= $i ?></a>
+                <option value="<?= $i ?>" <?php if($matrixPointSize == $i): ?>selected<?php endif; ?>><?= $i ?></a>
                 <?php endfor; ?>
-                </select>
+            </select>
         </div>
 
         <p uk-margin><input class="uk-button uk-button-default" type="submit" value="GENERATE"></p>
